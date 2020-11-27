@@ -11,12 +11,11 @@
     </q-card>
 
     <q-card class="backgroundDash">
-      <!-- <q-card-section>
+      <q-card-section>
         <q-card class="analise">
           <q-card-section> </q-card-section>
         </q-card>
-      </q-card-section> -->
-
+      </q-card-section>
       <q-card class="consumoGeral">
         <q-card-section> </q-card-section>
       </q-card>
