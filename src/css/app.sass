@@ -1,96 +1,184 @@
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
+
+//Fonts Variables
+$roboto: 'Roboto', sans-serif
+
 // app global css
 .backgroundColor
   background-color: #2E3035
-  position: relative
-  width: 1920px
-  height: 1080px
 
+.backgroundDash
+  position: absolute
+  width: 1327px
+  height: 875px
+  left: 12px
+  top: 28px
 
+  background: #353942
+  border-radius: 50px
+  
 .LeftBar
   position: absolute
-  width: 103px
-  height: 913px
-  left: 55px
-  top: 111px
+  width: 71px
+  height: 760px
+  left: 38px
+  top: 86px
 
   background: #2E3035
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5)
   border-radius: 35px
 
-.maquina1
-  position: absolute
-  width: 332.57px
-  height: 251px
-  left: 270px
-  top: 756px
 
-  background: #2E3035
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  border-radius: 31px
+.logo
+  width: 40px
+  height: 40px
 
-.maquina2
-  position: absolute
-  width: 331.11px
-  height: 251px
-  left: 622.99px
-  top: 756px
-
-  background: #2E3035
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  border-radius: 31px
-
-.maquina3
-  position: absolute
-  width: 332.57px
-  height: 251px
-  left: 975.97px
-  top: 756px
-
-  background: #2E3035
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  border-radius: 31px
-
-.consumoGeral
-  position: absolute
-  width: 1039px
-  height: 353px
-  left: 270px
-  top: 365px
-
-  background: #2E3035
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  border-radius: 40px
+.fror
+  width: 100px
+  height: 100px
 
 .analise
   position: absolute
-  width: 1039px
-  height: 187px
-  left: 270px
-  top: 142px
+  width: 1007px
+  height: 169px
+  left: 219px
+  top: 83.5px
 
   background: #F29FBD
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   border-radius: 35px
 
-.backgroundDash
+.analise-text
   position: absolute
-  width: 1362px
-  height: 96%
-  left: 18px
-  top: 32px
+  text-width: 10px
+  font-family: $roboto
+  color: white
+  letter-spacing: 2px
+  
 
-  background: #353942
-  border-radius: 100px
+.consumoGeral
+  position: absolute
+  width: 1007px
+  height: 319px
+  left: 219px
+  top: 280px
+
+  background: #2E3035
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 35px
+
+.grafico1
+  position: absolute
+  width: 322.01px
+  height: 220px
+  left: 219px
+  top: 625px
+
+  background: #2E3035
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 31px
+
+.grafico2
+  position: absolute
+  width: 320.6px
+  height: 220px
+  left: 560.79px
+  top: 625px
+
+  background: #2E3035
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 31px
+
+.quantitativa
+  position: absolute
+  width: 322.01px
+  height: 220px
+  left: 902.57px
+  top: 625px
+
+  background: #2E3035
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 31px
 
 .timeDate
-
   position: absolute
-  width: 368px
-  height: 221px
-  left: 1490px
-  top: 97px
+  width: 336px
+  height: 195px
+  left: 1442px
+  top: 111px
 
   background: linear-gradient(180deg, #B8B0FB 19.46%, #877CEB 100%)
   box-sizing: border-box
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   border-radius: 31px
+
+.todayDate
+  position: absolute
+  top: 45px
+  left: 110px
+
+  font-family: Roboto
+  font-style: normal
+  font-weight: normal
+  font-size: 45px
+  line-height: 35px
+  text-align: center
+
+  color: #FFFFFF
+
+
+.maquina1
+  position: absolute
+  width: 336px
+  height: 71px
+  left: 1442px
+  top: 354px
+
+  background: #353942
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
+
+.maquina2
+  position: absolute
+  width: 336px
+  height: 72px
+  left: 1442px
+  top: 445px
+
+  background: #353942
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
+
+.maquina3
+  position: absolute
+  width: 336px
+  height: 71px
+  left: 1442px
+  top: 545px
+
+  background: #353942
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
+
+.maquina4
+  position: absolute
+  width: 336px
+  height: 71px
+  left: 1442px
+  top: 642px
+
+  background: #353942
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
+
+.maquina5
+  position: absolute
+  width: 336px
+  height: 71px
+  left: 1442px
+  top: 740px
+
+  background: #353942
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 20px
