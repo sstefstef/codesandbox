@@ -1,37 +1,86 @@
 <template>
-  <q-page class="flex flex-center">
-    <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" /> -->
+  <q-page class="flex flex-center backgroundColor">
+    <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" /> a -->
 
-    <q-card class="backgroundColor">
-      <q-card-section> </q-card-section>
-    </q-card>
-
-    <q-card class="timeDate">
-      <q-card-section> </q-card-section>
-    </q-card>
-
-    <q-card class="backgroundDash">
+    <div class="backgroundDash">
       <q-card-section>
         <q-card class="analise">
-          <q-card-section> </q-card-section>
+          <q-card-section>
+            <h4 class="analise-text">Análise de Consumo</h4>
+          </q-card-section>
+          <img class="fror" src="~assets/prantinha.svg" />
         </q-card>
       </q-card-section>
       <q-card class="consumoGeral">
         <q-card-section> </q-card-section>
       </q-card>
-      <q-card class="maquina1">
+      <q-card class="grafico1">
         <q-card-section> </q-card-section>
       </q-card>
-      <q-card class="maquina2">
+      <q-card class="grafico2">
         <q-card-section> </q-card-section>
       </q-card>
-      <q-card class="maquina3">
+      <q-card class="quantitativa">
         <q-card-section> </q-card-section>
       </q-card>
       <q-card class="LeftBar">
-        <q-card-section> </q-card-section>
+        <q-card-section>
+          <div class="column justify-evenly">
+            <img
+              class="logo q-mb-xl"
+              src="~assets/home.svg"
+              @click="funcaoClick"
+            />
+            <img
+              class="logo q-my-xl"
+              src="~assets/pie-chart.svg"
+              @click="funcaoClick"
+            />
+            <img
+              class="logo q-my-xl"
+              src="~assets/profile.svg"
+              @click="funcaoClick"
+            />
+            <img
+              class="logo q-my-xl"
+              src="~assets/chat.svg"
+              @click="funcaoClick"
+            />
+            <img
+              class="logo q-my-xl"
+              src="~assets/settings.svg"
+              @click="funcaoClick"
+            />
+            <img
+              class="logo q-my-xl"
+              src="~assets/logout.svg"
+              @click="funcaoClick"
+            />
+          </div>
+        </q-card-section>
       </q-card>
+    </div>
+
+    <q-card class="timeDate">
+      <q-card-section>
+        <p class="todayDate">
+          {{ hourAndDate }}
+          <br />
+          <br />
+          {{ dayOfTheWeek }}
+        </p>
+      </q-card-section>
     </q-card>
+
+    <q-btn text-color="white" class="maquina1" label="Máquina 1" />
+
+    <q-btn text-color="white" class="maquina2" label="Máquina 2" />
+
+    <q-btn text-color="white" class="maquina3" label="Máquina 3" />
+
+    <q-btn text-color="white" class="maquina4" label="Máquina 4" />
+
+    <q-btn text-color="white" class="maquina5" label="Máquina 5" />
 
     <!-- <q-card
       v-if="showCard"
@@ -57,14 +106,34 @@ export default {
   data() {
     return {
       showCard: true,
-      lorem:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      variavelnova: 0,
-      variavelnova2: 0,
-      variavelnova3: 0
+      hourAndDate: null,
+      dayOfTheWeek: null
     }
   },
   methods: {
+    getDate() {
+      var days = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+      ]
+
+      var data = new Date()
+      var hour = data.getHours()
+      var minutes = data.getMinutes()
+      var dayOfTheWeek = days[data.getDay()]
+      // return `${hour} - ${dayOfTheWeek}`
+
+      this.hourAndDate = `${hour}:${minutes}`
+      this.dayOfTheWeek = dayOfTheWeek
+    },
+    funcaoClick() {
+      console.log('Me apertaram!!')
+    },
     submit() {
       this.showCard = false
       console.log('Enviado')
@@ -77,6 +146,7 @@ export default {
   },
   mounted() {
     this.createText()
+    this.getDate()
   }
 }
 </script>
